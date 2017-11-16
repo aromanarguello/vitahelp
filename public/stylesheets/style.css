@@ -1,3 +1,9 @@
+/*--- COLORS ---*/
+/*
+  peter river: rgb(52, 152, 219);
+*/
+/*--------------*/
+
 body {
   background-color: #fff;
 }
@@ -23,36 +29,22 @@ body {
   text-align: center;
   display: inline-block;
   margin: 0 0px 0 40px;
+
 }
 
 .header-text-wrap h1 {
   margin: 0 0 0 0;
 }
 
-/*footer {
-  width: 100%;
+footer {
+  width: 95%;
   height: 100px;
   background-color: rgb(127, 140, 141);
-}*/
+  margin: 0 auto;
+  border-radius: 5px;
+}
 
 @media only screen and (max-width: 480px) {
-
-
-  /*.nav-list {
-    border: 1px solid;
-    visibility: none;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    float: right;
-    margin: 0 0 0 620px;
-    padding: 0;
-  }*/
-
-  /*.nav-list li {
-    margin: 0 50px 0 50px;
-    font-size: 17px;
-  }*/
 
   .menu-btn a:link,
   .menu-btn a:visited {
@@ -69,28 +61,48 @@ body {
   .bar-icon {
     font-size: 40px;
     font-weight: bold;
+    color: rgb(52, 152, 219);
   }
   .body-container {
     width: 95%;
     height: 500px;
     margin: 0 auto;
-    border: 1px solid;
+    /*border: 1px solid;*/
     display: flex;
     justify-content: center;
+    align-items: flex-start;
   }
+/*--------------*/
+/*--- INDEX ---*/
+/*--------------*/
   .free-container {
-    border: 1px solid;
-    width: 30%;
-    height: 15%;
+    width: 40%;
+    height: 55%;
     text-align: center;
-    display: flex;
-    align-items: center;
-    margin: 0;
+    margin-top: 50px;
+  }
+
+  .free {
+    margin-bottom: 50px;
   }
 
   .signup-btn-container {
-    border: 1px solid;
-    height: 20px;
-    align-self: center;
+    border: 3px solid rgb(52, 152, 219);
+    color: rgb(52, 152, 219);
+    border-radius: 20px;
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
+
+  .signup-btn-container p {
+    padding: 2px;
+  }
+
+  .login {
+    margin-top: 30px;
+  }
+
 }

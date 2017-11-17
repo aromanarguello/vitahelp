@@ -19,7 +19,7 @@ body {
   overflow: auto;
   display: flex;
   align-items: center;
-  box-shadow: 1px 1px 9px #888888;
+  box-shadow: 1px 1px 5px #888888;
   margin: 0 auto;
 }
 
@@ -48,6 +48,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 1px 1px 5px #888888;
 }
 
 .begin-btn {
@@ -95,20 +96,25 @@ footer {
 /*--- INDEX ---*/
 /*-------------*/
   .free-container {
-    width: 50%;
+    width: 55%;
     height: 55%;
     text-align: center;
     margin-top: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #888888;
   }
 
   .free {
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 200;
   }
 
   .signup-btn-container {
     border: 3px solid rgb(52, 152, 219);
-    color: rgb(52, 152, 219);
+    color: #fff;
+    background-color: rgb(52, 152, 219);
     border-radius: 20px;
     height: 30px;
     width: 70%;

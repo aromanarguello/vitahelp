@@ -1,24 +1,25 @@
 /*--- COLORS ---*/
 /*
   peter river: rgb(52, 152, 219);
+  orange: rgb(243, 156, 18);
+  belize hole: rgb(41, 128, 185);
 */
 /*--------------*/
 
 body {
-  background-color: #fff;
+  background-color: rgb(236, 240, 241);
 }
 .nav-container {
   border-bottom: 1px solid rgb(127, 140, 141);
-  background-color: rgb(236, 240, 241);
+  background-color: #fff;
   border-radius: 5px;
-  width: 95%;
+  width: 98%;
   height: 70px;
   font-family: Raleway;
   overflow: auto;
   display: flex;
   align-items: center;
-  /*position: fixed;*/
-  box-shadow: 3px 3px 10px #888888;
+  box-shadow: 1px 1px 9px #888888;
   margin: 0 auto;
 }
 
@@ -37,11 +38,28 @@ body {
 }
 
 footer {
-  width: 95%;
+  width: 98%;
   height: 100px;
-  background-color: rgb(127, 140, 141);
+  background-color: #fff;
   margin: 0 auto;
   border-radius: 5px;
+  color: black;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.begin-btn {
+  border: 3px solid rgb(243, 156, 18);
+  border-radius: 35px;
+  width: 120px;
+  padding: 10px;
+  background-color: rgb(243, 156, 18);
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  align-self: center;
 }
 
 @media only screen and (max-width: 480px) {
@@ -63,6 +81,7 @@ footer {
     font-weight: bold;
     color: rgb(52, 152, 219);
   }
+
   .body-container {
     width: 95%;
     height: 500px;
@@ -72,11 +91,11 @@ footer {
     justify-content: center;
     align-items: flex-start;
   }
-/*--------------*/
+/*-------------*/
 /*--- INDEX ---*/
-/*--------------*/
+/*-------------*/
   .free-container {
-    width: 40%;
+    width: 50%;
     height: 55%;
     text-align: center;
     margin-top: 50px;
@@ -84,6 +103,7 @@ footer {
 
   .free {
     margin-bottom: 50px;
+    font-size: 30px;
   }
 
   .signup-btn-container {
@@ -105,4 +125,29 @@ footer {
     margin-top: 30px;
   }
 
+  /*------------*/
+  /*--- FORM ---*/
+  /*------------*/
+  #ageGroups {
+    text-align: center;
+  }
+
+  .form-container {
+    margin-top: 20px;
+  }
+
+  .ageGroup {
+    color: rgb(41, 128, 185);
+  }
+
+  .ageGroup p {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  #sunlight,
+  #excerise {
+    text-align: center;
+    width: 190px;
+  }
 }

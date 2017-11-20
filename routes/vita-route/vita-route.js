@@ -6,7 +6,7 @@ router.get("/ready", (req, res, next) => {
   res.render("begin");
 });
 
-router.get("/register", (req, res, next) => {
+router.get("/step-one", (req, res, next) => {
   res.render("main-req");
 });
 

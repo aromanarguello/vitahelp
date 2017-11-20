@@ -10,5 +10,9 @@ router.get("/main-req", (req, res, next) => {
   res.render("main-req");
 });
 
+router.get("/profile", (req, res, next) => {
+  res.render("profile");
+});
+
 
 module.exports = router;

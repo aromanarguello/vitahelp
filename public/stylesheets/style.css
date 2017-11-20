@@ -45,10 +45,14 @@ body {
   margin-top: 5px;
 }
 
+.media-query-nav {
+  visibility: hidden;
+}
+
 .header-text-wrap {
   /*border: 1px solid;*/
   align-self: center;
-  width: 15%;
+  width: 150px;
   text-align: center;
   display: inline-block;
   margin: 0 0px 0 40px;
@@ -86,20 +90,6 @@ footer {
   box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
 }
 
-
-
-  .menu-btn a:link,
-  .menu-btn a:visited {
-    text-decoration: none;
-  }
-
-  .menu-icon-container {
-    margin-top: 5px;
-    margin-left: 220px;
-    display: flex;
-    align-items: center;
-  }
-
   .bar-icon {
     font-size: 38px;
     font-weight: bold;
@@ -114,71 +104,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-  }
-/*-------------*/
-/*--- INDEX ---*/
-/*-------------*/
-  .free-container {
-    width: 55%;
-    height: 55%;
-    text-align: center;
-    margin-top: 50px;
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
-  }
-
-  .free {
-    margin-bottom: 50px;
-    font-size: 28px;
-    font-weight: 200;
-  }
-
-  .signup-btn-container {
-    border: 3px solid rgb(52, 152, 219);
-    color: #fff;
-    background-color: rgb(52, 152, 219);
-    border-radius: 5px;
-    height: 30px;
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
-  }
-
-  .signup-btn-container p {
-    padding: 2px;
-  }
-
-  .login {
-    margin-top: 30px;
-  }
-
-  /*------------*/
-  /*--- FORM ---*/
-  /*------------*/
-  #ageGroups {
-    text-align: center;
-  }
-
-  .form-container {
-    margin-top: 20px;
-  }
-
-  .ageGroup {
-    color: rgb(41, 128, 185);
-  }
-
-  .ageGroup p {
-    font-size: 17px;
-    font-weight: bold;
-  }
-
-  #sunlight,
-  #excerise {
-    text-align: center;
-    width: 190px;
   }
 
   /*---------------*/
@@ -254,3 +179,100 @@ footer {
     text-align: center;
     margin-top: 45px;
   }
+
+
+
+/*-------------*/
+/*--- INDEX ---*/
+/*-------------*/
+  .free-container {
+    width: 55%;
+    height: 55%;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
+  }
+
+  .free {
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: 200;
+  }
+
+  .signup-btn-container {
+    border: 3px solid rgb(52, 152, 219);
+    color: #fff;
+    background-color: rgb(52, 152, 219);
+    border-radius: 5px;
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
+  }
+
+  .signup-btn-container p {
+    padding: 2px;
+  }
+
+  .login {
+    margin-top: 30px;
+  }
+
+  /*------------*/
+  /*--- FORM ---*/
+  /*------------*/
+  #ageGroups {
+    text-align: center;
+  }
+
+  .form-container {
+    margin-top: 20px;
+  }
+
+  .ageGroup {
+    color: rgb(41, 128, 185);
+  }
+
+  .ageGroup p {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  #sunlight,
+  #excerise {
+    text-align: center;
+    width: 190px;
+  }
+
+
+@media only screen and (min-width: 768px) {
+  .menu-icon-container {
+    visibility: hidden;
+  }
+
+
+
+  .nav-container {
+    display: flex;
+  }
+
+  .media-query-nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    visibility: visible;
+    justify-content: flex-end;
+  }
+
+  .media-query-nav li,
+  .media-query-nav a  {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+}

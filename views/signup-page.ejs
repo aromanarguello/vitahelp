@@ -1,4 +1,8 @@
-
+<% if (typeof errorMessage !== "undefined") { %>
+  <p class="error-message">
+   <%= errorMessage %>
+  </p>
+<%} %>
 
 <form id="form" action="/signup" method="post">
   <label for="signupEmailInput"> Email: </label>

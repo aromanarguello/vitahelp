@@ -35,6 +35,8 @@ app.use(
     secret: "this is a string deprecation warning"
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
@@ -42,8 +44,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 // ROUTE ----------------------------------------
 const index = require('./routes/index');

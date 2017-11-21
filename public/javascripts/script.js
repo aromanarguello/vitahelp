@@ -1,12 +1,10 @@
 $(document).ready( () => {
   $('.icon').click( ()=> {
-
-    if ( $('.sub-navbar').css("visibility", "visible") === false ) {
+    if ( $('.sub-navbar').css("visibility") === "hidden" ) {
       $( '.sub-navbar' ).css( "visibility", "visible" );
     }
-    else if( $( '.sub-navbar' ).css( "visibility", "visible" ) === true ) {
+    else {
       $( '.sub-navbar' ).css( "visibility", "hidden" );
     }
-
   });
 });

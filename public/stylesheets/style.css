@@ -228,6 +228,11 @@ footer {
     padding: 2px;
   }
 
+  .signup-btn-container a:link,
+  .signup-btn-container a:visited {
+    text-decoration: none;
+  }
+
   .login {
     margin-top: 30px;
   }
@@ -343,7 +348,7 @@ footer {
   .menu-icon-container,
   .bar-icon {
     width: 0;
-    margin: 0;
+
     padding: 0;
   }
 

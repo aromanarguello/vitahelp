@@ -18,7 +18,9 @@ const userSchema = new Schema ({
   additional: {
     type: String,
     maxLength: [300, "The comment can't be longer than 300 characters."]
-   }
+  },
+  signupEmailReference: { type: String },
+  signupPasswordReference: { type: String }
 });
 
 const UserModel = mongoose.model("User", userSchema);

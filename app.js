@@ -5,8 +5,11 @@ const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
+const session      = require('express-session');
+const passport     = require('passport');
 
-require("./config/vitahelp-setup.js")
+require("./config/vitahelp-setup.js");
+require("./config/passport-setup.js")
 
 const app = express();
 
@@ -25,6 +28,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
+app.use(
+  session({
+    resave: true,
+    saveUnitialized: true,
+    secret: "this is a string deprecation warning"
+  })
+);
+
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+
+  next();
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // ROUTE ----------------------------------------
 const index = require('./routes/index');

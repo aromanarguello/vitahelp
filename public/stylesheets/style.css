@@ -299,6 +299,7 @@ footer {
   text-transform: uppercase;
   transition: .3s ease background;
   width: 100%;
+  margin-top: 15px;
 }
 
 #form button:hover {

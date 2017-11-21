@@ -1,4 +1,5 @@
 const express = require('express');
+const UserModel = require("../models/user-models.js")
 
 const router = express.Router();
 

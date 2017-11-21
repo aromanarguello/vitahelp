@@ -29,7 +29,7 @@ app.use(layouts);
 const index = require('./routes/index');
 app.use('/', index);
 
-const myVitaRouter = require('./routes/vita-route/vita-route');
+const myVitaRouter = require('./routes/vita-route/vita-router');
 app.use(myVitaRouter);
 
 // END ROUTES -----------------------------------

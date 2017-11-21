@@ -11,7 +11,14 @@ const userSchema = new Schema ({
     type: String,
     required: [true, "Please enter last name."]
   },
-  additonal: { type: String }
+  location: {
+    type: String,
+    required: [true, "Please enter location."]
+  },
+  additional: {
+    type: String,
+    maxLength: [300, "The comment can't be longer than 300 characters."]
+   }
 });
 
 const UserModel = mongoose.model("User", userSchema);

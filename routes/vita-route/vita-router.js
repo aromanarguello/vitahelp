@@ -73,18 +73,24 @@ router.post("/signup", (req, res, next) => {
 // LOG IN ROUTES --------------------------------------------------
 
 router.get("/login", (req, res, next) => {
+  if (req.user) {
+    res.redirect("/login");
+
+    return;
+  }
   res.render("login-page");
 });
 
 router.post("/login", (req, res, next) => {
-  UserModel.findOne({ email: req.body.loginEmailReference })
+  UserModel.findOne({ signupEmailReference: req.body.loginEmailReference })
   .then( userFromDb => {
     if ( userFromDb === null ) {
       res.locals.errorMessage = "Invalid email.";
       res.render("login-page");
+      console.log("this is because email" + userFromDb);
       return;
     }
-    const isPasswordGood = bcrypt.compareSync( req.body.loginPassword, userFromDb.encryptedPassword);
+    const isPasswordGood = bcrypt.compareSync( req.body.loginPasswordReference, userFromDb.encryptedPassword);
 
     if (isPasswordGood === false) {
       res.locals.errorMessage = "Password Incorrect.";
@@ -95,8 +101,10 @@ router.post("/login", (req, res, next) => {
     req.login( userFromDb, err => {
       if ( err ) {
         next(err);
-      }
-      res.redirect("welcome-page");
+      } else {
+        console.log("Success");
+      res.redirect("/profile");
+    }
     });
 
   })
@@ -136,14 +144,14 @@ UserModel.findByIdAndUpdate(
       next(err);
       return;
     }
-    res.redirect(`/profile/${userId}`);
+    res.redirect("/profile");
   }
 );
 
 });
 
 
-router.get("/profile/:id", (req, res, next) => {
+router.get("/profile", (req, res, next) => {
   res.render("profile");
 });
 

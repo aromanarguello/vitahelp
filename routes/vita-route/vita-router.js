@@ -109,8 +109,7 @@ router.get("/logout", ( req, res, next ) => {
 
 // STEP ONE ADDITIONAL USER INFORMATION ---------------------------------
 router.get("/step-one", (req, res, next) => {
-  // res.render("main-req");
-  // res.locals.currentUser = req.user;
+
   res.render("main-req");
 });
 
@@ -125,9 +124,7 @@ router.post("/step-one/:id", (req, res, next) => {
       ageForm:            req.body.ageForm,
       additionalComments: req.body.additionalCommentReference
     });
-
-    // res.locals.userDetails = userFromDb;
-
+    res.locals.currentUser = userFromDb;
     return userFromDb.save();
   })
   .then(() =>{

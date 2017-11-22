@@ -9,7 +9,7 @@ const session      = require('express-session');
 const passport     = require('passport');
 
 require("./config/vitahelp-setup.js");
-require("./config/passport-setup.js")
+require("./config/passport-setup.js");
 
 const app = express();
 

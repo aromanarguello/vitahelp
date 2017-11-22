@@ -14,30 +14,32 @@
         <div class="header-text-wrap"><h1> VitaHelp </h1></div>
         <ul class="media-query-nav">
           <li><a href"/"> Help </a></li>
-          <li><a href"/"> Profile </a></li>
           <li><a href"/"> Home </a></li>
           <% if (currentUser) { %>
             <a href="/logout"> Log Out </a>
+            <a href="/edit"> Edit </a>
           <% } %>
         </ul>
         <div class="menu-icon-container">
           <i class="icon bar-icon ion-navicon"></i>
         </div>
-
       </div>
-
-
-
     </nav>
+
     <div class="sub-navbar">
       <div class="wrapper">
       <ul>
         <li><a href="/"> Home </a></li>
-        <li><a href="profile"> Profile </a></li>
         <li><a href="/"> Help </a></li>
+        <li> <% if (currentUser) { %>
+          <a href="/logout"> Log Out </a>
+          <a href="/edit"> Edit </a>
+        <% } %>
+        </li>
       </ul>
       </div>
     </div>
+
     <%- body %>
 
     <%# <div class="footer-container">

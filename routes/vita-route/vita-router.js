@@ -150,6 +150,10 @@ UserModel.findByIdAndUpdate(
 
 });
 
+router.get("/edit", (req, res, next) => {
+  res.render("profile-edit-page");
+});
+
 
 router.get("/profile", (req, res, next) => {
   res.render("profile");

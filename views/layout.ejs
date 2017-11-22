@@ -32,6 +32,7 @@
         <li><a href="/"> Home </a></li>
         <li><a href="/"> Help </a></li>
         <li> <% if (currentUser) { %>
+        
           <a href="/logout"> Log Out </a>
           <a href="/edit"> Edit </a>
         <% } %>
@@ -53,6 +54,11 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous">
     </script>
+    <script
+       async
+       defer
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEJ9s6Ffx26aZTWxJniOwc0qX_HV4zHKQ">
+   </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="./javascripts/script.js"></script>
   </body>

@@ -52,6 +52,9 @@ app.use('/', index);
 const myVitaRouter = require('./routes/vita-route/vita-router');
 app.use(myVitaRouter);
 
+const myClinicRouter = require('./routes/clinic-route/clinic-router');
+app.use(myClinicRouter);
+
 // END ROUTES -----------------------------------
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -159,8 +159,5 @@ router.get("/profile", (req, res, next) => {
   res.render("profile");
 });
 
-router.get("/centers", (req, res, next) => {
-  res.render("google-map");
-});
 
 module.exports = router;

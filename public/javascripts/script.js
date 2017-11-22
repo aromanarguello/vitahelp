@@ -22,6 +22,12 @@ function startMap() {
     }
   );
 
+  var brickellMarker = new google.maps.Marker({
+      position: brickellMia,
+      map: map,
+      title: 'Hello World!'
+    });
+
 }
 
 startMap();

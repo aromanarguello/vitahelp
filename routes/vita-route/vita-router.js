@@ -11,7 +11,7 @@ router.get("/ready", (req, res, next) => {
 });
 
 
-
+// SIGN UP ROUTES --------------------------------------------------
 // STEP #1:
 router.get("/signup", (req, res, next) => {
 
@@ -67,6 +67,10 @@ router.post("/signup", (req, res, next) => {
     next(err);
   });
 });
+// END SIGN UP ROUTES --------------------------------------------------
+
+
+// LOG IN ROUTES --------------------------------------------------
 
 router.get("/login", (req, res, next) => {
   res.render("login-page");
@@ -100,6 +104,8 @@ router.post("/login", (req, res, next) => {
     next( err );
   });
 });
+
+// END LOG IN ROUTES --------------------------------------------------
 
 router.get("/logout", ( req, res, next ) => {
   req.logout();

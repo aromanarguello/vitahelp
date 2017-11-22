@@ -16,10 +16,14 @@
           <li><a href"/"> Help </a></li>
           <li><a href"/"> Profile </a></li>
           <li><a href"/"> Home </a></li>
+          <% if (currentUser) { %>
+            <a href="/logout"> Log Out </a>
+          <% } %>
         </ul>
         <div class="menu-icon-container">
           <i class="icon bar-icon ion-navicon"></i>
         </div>
+
       </div>
 
 

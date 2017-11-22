@@ -120,31 +120,26 @@ router.get("/step-one", (req, res, next) => {
 });
 
 router.post("/step-one/:id", (req, res, next) => {
-  UserModel.findById(req.params.id)
-  .then( userFromDb => {
-
-    req.user.set({
-      locationForm:       req.body.locationForm,
-      firstNameForm:      req.body.firstNameForm,
-      lastNameForm:       req.body.lastNameForm,
-      ageForm:            req.body.ageForm,
-      additionalComments: req.body.additionalCommentReference
-    });
-    res.locals.currentUser = userFromDb;
-    return userFromDb.save();
-  })
-  .then(() =>{
-    res.redirect(`/profile/${req.params.id}`);
-  })
-  .catch( err => {
-    if ( err.errors ) {
-      res.locals.validationErrors = err.errors;
-      res.render("main-req");
-    }
-    else {
+const userId = req.params.id;
+const userChanges = {
+  locationForm:       req.body.locationForm,
+  firstNameForm:      req.body.firstNameForm,
+  lastNameForm:       req.body.lastNameForm,
+  ageForm:            req.body.ageForm,
+  additionalComments: req.body.additionalCommentReference
+};
+UserModel.findByIdAndUpdate(
+  userId,
+  userChanges,
+  (err, theUser) => {
+    if(err){
       next(err);
+      return;
     }
-  });
+    res.redirect(`/profile/${userId}`);
+  }
+);
+
 });
 
 

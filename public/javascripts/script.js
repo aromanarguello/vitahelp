@@ -1,3 +1,5 @@
+
+
 $(document).ready( () => {
   $('.icon').click( ()=> {
     if ( $('.sub-navbar').css("visibility") === "hidden" ) {
@@ -9,11 +11,22 @@ $(document).ready( () => {
   });
 
 
-// main.js
 function startMap() {
   var brickellMia = {
   	lat: 25.7601793,
   	lng: -80.1958755};
+
+  var miamiAddictionHelp = {
+    lat: -80.189430,
+    lng: 25.763690
+  };
+
+  var outpatientDrugTherapy = {
+    lat: -80.190644,
+    lng: 25.774533
+  };
+
+
   var map = new google.maps.Map(
     document.getElementById('map'),
     {
@@ -28,6 +41,17 @@ function startMap() {
       title: 'Hello World!'
     });
 
+  var mahMarker = new google.maps.Marker({
+    position: miamiAddictionHelp,
+    map: map,
+    title: "Miami Addicition Help"
+  });
+
+  var odtMarker = new google.maps.Marker({
+    position: outpatientDrugTherapy,
+    map: map,
+    title: "Outpatient Drug Therapy"
+  });
 }
 
 startMap();

@@ -7,7 +7,26 @@
   <label for="review-clinic-name">Clinic name: </label>
   <input id="review-clinic-name" name="reviewClinicName"/>
   <br />
-  <label for="review-content"> Write your review here: </label>
+  <label for="review-content"> Write your message here: </label>
   <textarea id="review-content" name="reviewContent"></textarea>
   <button> Submit </button>
 </form>
+
+<% userReviews.forEach( oneReview => { %>
+<ul>
+  <li class="review-list">
+  <a href="/user-reviews/<%= userReview._id %>/edit">Edit This Product</a>
+    <div class="comments-container">
+      <div class="review-text-box">
+        <h3>Clinic Name: <%=oneReview.authorName%></h3>
+        <p>Name: <%=oneReview.clinicName%></p>
+        <div class="inner-review-text">
+          <p>Message:
+            <%=oneReview.content%>
+          </p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<% }); %>

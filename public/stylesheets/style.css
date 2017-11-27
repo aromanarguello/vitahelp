@@ -401,6 +401,14 @@ footer {
     list-style-type: none;
   }
 
+  .requirement-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
 @media only screen and (min-width: 768px) {
   .menu-icon-container {
     visibility: hidden;

@@ -9,6 +9,6 @@ const clinicSchema = new Schema ({
   zipCode:      { type: Number }
 });
 
-const ClinicModel = mongoose.model( "clinics", clinicSchema);
+const ClinicModel = mongoose.model( "Clinic", clinicSchema);
 
 module.exports = ClinicModel;

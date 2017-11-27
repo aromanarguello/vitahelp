@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.connect('mongodb://localhost/vitaclinic', {useMongoClient: true});
 require("../config/vitahelp-setup");
 
 const ClinicModel = ("../models/clinic-model");
@@ -26,10 +27,3 @@ ClinicModel.create(clinicInfo, (err, clinicDocs) =>{
     console.log(`new product ${oneClinic.locationName}`);
   });
 });
-  // .then((clinicResults) => {
-  //     console.log(`Inserted ${clinicResults.length} products`);
-  // })
-  // .catch((err) => {
-  //     console.log("Product insert error!");
-  //     console.log(err);
-  // });

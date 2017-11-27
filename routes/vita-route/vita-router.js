@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const UserModel = require("../../models/user-model");
+const ClinicModel = require("../../models/clinic-review-model");
 const passport= require("passport");
 
 const router = express.Router();
@@ -158,6 +159,58 @@ router.get("/edit", (req, res, next) => {
 router.get("/profile", (req, res, next) => {
   res.render("profile");
 });
+
+router.get("/centers", (req, res, next) => {
+  ClinicModel.findById(req.params.id)
+  .then( reviewFromDb => {
+    res.locals.reviews = reviewFromDb;
+    return ClinicModel.find( {content: req.params.id}).exec();
+  })
+  .then( reviewResults => {
+    res.locals.listOfReviews = reviewResults;
+    res.render("google-map");
+  })
+  .catch( err => {
+    next( err );
+  });
+});
+
+// Facebook log in routes
+// -----------------------------------------------------------------------------
+
+// Link to "/facebook/login" to initiate the login process
+router.get("/facebook/login", passport.authenticate("facebook"));
+                                        //               |
+                                        // This name comes from the strategy
+
+// Facebook will redirect here after login is successful
+router.get("/facebook/success",    // no normal callback here
+  passport.authenticate("facebook", {
+      successRedirect: "/profile",
+      failureRedirect: "/login"
+  })
+);
+
+// Google log in routes
+// -----------------------------------------------------------------------------
+
+// Link to "/google/login" to initiate the login process
+router.get("/google/login",     // no normal callback here
+  passport.authenticate("google", {
+      scope: [
+          "https://www.googleapis.com/auth/plus.login",
+          "https://www.googleapis.com/auth/plus.profile.emails.read"
+      ]
+  })
+);
+
+// Google will redirect here after login is successful
+router.get("/google/success",     // no normal callback here
+  passport.authenticate("google", {
+      successRedirect: "/profile",
+      failureRedirect: "/login"
+  })
+);
 
 
 module.exports = router;

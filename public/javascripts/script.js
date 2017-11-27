@@ -17,13 +17,14 @@ function startMap() {
   	lng: -80.1958755};
 
   var miamiAddictionHelp = {
-    lat: -80.189430,
-    lng: 25.763690
+    lat:  25.763690,
+    lng: -80.189430
   };
 
+
   var outpatientDrugTherapy = {
-    lat: -80.190644,
-    lng: 25.774533
+    lat: 25.774533,
+    lng: -80.190644
   };
 
 

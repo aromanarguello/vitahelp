@@ -161,13 +161,11 @@ router.get("/profile", (req, res, next) => {
 });
 
 router.get("/centers", (req, res, next) => {
-  ClinicModel.findById(req.params.id)
+  ClinicModel.find()
+  .limit(10)
+  .sort({ dateAdded: -1})
   .then( reviewFromDb => {
     res.locals.reviews = reviewFromDb;
-    return ClinicModel.find( {content: req.params.id}).exec();
-  })
-  .then( reviewResults => {
-    res.locals.listOfReviews = reviewResults;
     res.render("google-map");
   })
   .catch( err => {

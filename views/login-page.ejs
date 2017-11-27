@@ -1,4 +1,9 @@
 <h2> Log In </h2>
+<% if (typeof errorMessage !== "undefined") { %>
+  <p class="error-message">
+   <%= errorMessage %>
+  </p>
+<%} %>
 
 <form id="form" action="/login" method="post">
   <label for="loginEmailInput"> Email: </label>

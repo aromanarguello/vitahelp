@@ -15,12 +15,14 @@ router.get("/centers/review/new", (req, res, next) => {
 });
 
 // STEP #2:
-router.post("/centers/review/", ( req, res, next)=> {
-  const reviewID = req.params.id;
+router.post("/centers/review", ( req, res, next)=> {
+
+
   const clinicReview = {
   content:    req.body.reviewContent,
   authorName: req.body.reviewAuthorName,
-  clinicName: req.body.reviewClinicName
+  clinicName: req.body.reviewClinicName,
+  dateAdded:  new Date()
 };
 
 const newReview = new ClinicModel( clinicReview );

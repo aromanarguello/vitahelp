@@ -8,6 +8,10 @@ const layouts      = require('express-ejs-layouts');
 const session      = require('express-session');
 const passport     = require('passport');
 
+// Load environment variables from the ".env" files
+// (put this before the setup files defines env variables)
+require("dotenv").config();
+
 require("./config/vitahelp-setup.js");
 require("./config/passport-setup.js");
 

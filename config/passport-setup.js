@@ -1,6 +1,6 @@
 const passport = require("passport");
 const FbStrategy = require("passport-facebook").Strategy;
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy
+const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const UserModel = require("../models/user-model");
 
 passport.serializeUser(( userFromDb, cb ) => {
@@ -30,9 +30,9 @@ passport.use(
     {
         // Facebook credentials
         // App ID
-        clientID:     "701396403388076",
+        clientID:     process.env.FB_ID,
         // App Secret
-        clientSecret: "5bc130f81c20b61701b35cc37727d21e",
+        clientSecret: process.env.FB_SECRET,
 
         // Where to go after log in is successful (one of our routes)
         callbackURL: "/facebook/success"
@@ -83,8 +83,8 @@ passport.use(
     // 1st arg of GoogleStrategy -> settings object
     {
         // Google credentials
-        clientID:     "709056939284-jcu1u0i1mipqj1bmcnit68a6frh3miaa.apps.googleusercontent.com",
-        clientSecret: "dM5ZfMXWKAIV28Pneb-rizMW",
+        clientID:     process.env.GOOGLE_ID,
+        clientSecret: process.env.GOOGLE_SECRET,
 
         // Where to go after log in is successful (one of our routes)
         callbackURL: "/google/success",

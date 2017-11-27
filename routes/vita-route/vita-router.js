@@ -184,7 +184,7 @@ router.get("/facebook/login", passport.authenticate("facebook"));
 // Facebook will redirect here after login is successful
 router.get("/facebook/success",    // no normal callback here
   passport.authenticate("facebook", {
-      successRedirect: "/profile",
+      successRedirect: "/",
       failureRedirect: "/login"
   })
 );

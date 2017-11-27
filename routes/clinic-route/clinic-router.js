@@ -65,7 +65,7 @@ router.get("/user-reviews/:id", (req, res, next) => {
   })
   .then( userReviewResults => {
     res.locals.listOfUserReviews = userReviewResults;
-    res.render("/user-reviews/new");
+    res.render("user-reviews/new");
   })
   .catch( err => {
     next( err );

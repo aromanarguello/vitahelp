@@ -266,6 +266,7 @@ footer {
   .review-container {
     margin-left: 10px;
   }
+
   /*------------*/
   /*--- FORM ---*/
   /*------------*/
@@ -371,7 +372,30 @@ footer {
 
 }
 
+.comments-container {
+  width: 80%;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
+  margin: 0 auto;
+}
 
+.review-text-box {
+  padding: 2px 0 0 10px;
+}
+
+.inner-review-text {
+  border: 1px solid rgba(127, 140, 141,0.3);
+  border-radius: 5px;
+  padding: 0;
+  margin-right: 13px;
+  height: 150px;
+}
+
+.inner-review-text p {
+  padding-left: 6px;
+}
 
 @media only screen and (min-width: 768px) {
   .menu-icon-container {

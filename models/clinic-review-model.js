@@ -10,7 +10,8 @@ const clinicReviewSchema = new Schema({
   clinicName: {
     type: String,
     required: [true, "Please enter clinic's name."]
-  }
+  },
+  dateAdded: { type: Date }
 });
 
 const ClinicReviewModel = mongoose.model("Review", clinicReviewSchema);

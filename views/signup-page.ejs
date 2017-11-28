@@ -4,6 +4,14 @@
   </p>
 <%} %>
 
+<form id="form" action="/signup" method="post">
+  <label for="signupEmailInput"> Email: </label>
+  <input id="signupEmailInput" type="text" name="signupEmailReference" value="">
+  <label for="signupPasswordInput"> Password: </label>
+  <input id="signupPasswordInput" type="password" name="signupPasswordReference" value="">
+  <button> Submit </button>
+</form>
+
 <div class="requirement-container">
   <div class="requirement-text">
     <ul>
@@ -12,11 +20,3 @@
     </ul>
   </div>
 </div>
-
-<form id="form" action="/signup" method="post">
-  <label for="signupEmailInput"> Email: </label>
-  <input id="signupEmailInput" type="text" name="signupEmailReference" value="">
-  <label for="signupPasswordInput"> Password: </label>
-  <input id="signupPasswordInput" type="password" name="signupPasswordReference" value="">
-  <button> Submit </button>
-</form>

@@ -11,9 +11,15 @@ $(document).ready( () => {
   });
 
 function startMap() {
+  $(document).ready( () => {
+    const lat = $('.locationLat').html();
+    const lon = $('.locationLon').html();
+  });
+
   var brickellMia = {
   	lat: 25.7601793,
-  	lng: -80.1958755};
+  	lng: -80.1958755
+  };
 
   var miamiAddictionHelp = {
     lat:  25.763690,

@@ -1,7 +1,14 @@
 <% clinicSeed.forEach( oneClinic => { %>
   <ul>
-    <li>
-      <h3><%=oneClinic.locationName%></h3>
-    </li>
+  <div class="clinic-list-container comments-container">
+    <div class="review-list">
+      <li>
+        <h3><%=oneClinic.locationName%></h3>
+        <p class="zipCode"><%=oneClinic.zipCode%></p>
+        <p class="description"><%=oneClinic.description%></p>
+        <a href=<%=oneClinic.url%>>Website</a></a>
+      </li>
+    </div>
+  </div>
   </ul>
 <%});%>

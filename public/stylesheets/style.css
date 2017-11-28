@@ -148,6 +148,12 @@ footer {
 .login-header {
   text-align: center;
 }
+
+.clinic-list-container {
+  text-align: center;
+  display: flex;
+}
+
 /*---------------*/
 /*--- PROFILE ---*/
 /*---------------*/
@@ -283,6 +289,10 @@ hr {
   margin-left: 10px;
 }
 
+.clinic-link {
+  margin-left: 12px;
+  font-size: 17px;
+}
 /*------------*/
 /*--- FORM ---*/
 /*------------*/
@@ -394,7 +404,7 @@ hr {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .review-text-box {

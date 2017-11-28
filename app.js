@@ -15,9 +15,6 @@ require("dotenv").config();
 require("./config/vitahelp-setup.js");
 require("./config/passport-setup.js");
 
-const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/vitaclinic', {useMongoClient: true});
-
 const app = express();
 
 // view engine setup

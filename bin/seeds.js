@@ -1,3 +1,4 @@
+require("dotenv").config();
 require("../config/vitahelp-setup");
 const ClinicSeedModel = require("../models/clinic-seed-model");
 

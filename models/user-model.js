@@ -9,7 +9,7 @@ const userSchema = new Schema ({
   firstNameForm: { type: String},
   lastNameForm: { type: String },
   ageForm: { type: Number },
-  additionalComments: { type: String }
+  additionalComments: { type: String },
 });
 
 const UserModel = mongoose.model("User", userSchema);

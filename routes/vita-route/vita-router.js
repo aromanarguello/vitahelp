@@ -3,8 +3,8 @@ const bcrypt =          require("bcrypt");
 const UserModel =       require("../../models/user-model");
 const ClinicModel =     require("../../models/clinic-review-model");
 const ClinicSeedModel = require("../../models/clinic-seed-model");
-const passport=         require("passport");
-
+const passport =        require("passport");
+const myUploader =      require("../../config/multer-setup");
 const router = express.Router();
 
 

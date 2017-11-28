@@ -2,6 +2,7 @@ const express = require("express");
 const UserModel = require("../../models/user-model");
 const ClinicModel = require("../../models/clinic-review-model");
 const UserReviewModel = require("../../models/clinic-model");
+const ClinicSeedModel = require("../../models/clinic-seed-model");
 
 const router = express.Router();
 // STEP #1:
@@ -121,6 +122,17 @@ router.post("/user-reviews/:id/delete", (req, res, next) => {
 
 });
 
+router.get("/clinic-info", (req, res, next) => {
+  ClinicSeedModel
+  .find()
+  .exec()
+  .then( clinicFromDb => {
+    res.json(clinicFromDb);
+  })
+  .catch( err => {
+    res.json({ message: "Error with the clinics" });
+  });
+});
 
 
 module.exports = router;

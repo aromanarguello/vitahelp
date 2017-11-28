@@ -1,8 +1,6 @@
-const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/vitaclinic', {useMongoClient: true});
 require("../config/vitahelp-setup");
+const ClinicSeedModel = require("../models/clinic-seed-model");
 
-const ClinicModel = ("../models/clinic-model");
 
 const clinicInfo = [
   {
@@ -19,11 +17,11 @@ const clinicInfo = [
   }
 ];
 
-ClinicModel.create(clinicInfo, (err, clinicDocs) =>{
-  if (err) {
-    throw err;
-  }
-  clinicDocs.forEach( (oneClinic) => {
-    console.log(`new product ${oneClinic.locationName}`);
-  });
+ClinicSeedModel.create(clinicInfo)
+  .then( clinicSeedResults => {
+    console.log(`Inserted ${clinicSeedResults.length}
+    clinics`);
+  })
+  .catch( err => {
+    console.log(err);
 });

@@ -1,8 +1,9 @@
-const express = require("express");
-const bcrypt = require("bcrypt");
-const UserModel = require("../../models/user-model");
-const ClinicModel = require("../../models/clinic-review-model");
-const passport= require("passport");
+const express =         require("express");
+const bcrypt =          require("bcrypt");
+const UserModel =       require("../../models/user-model");
+const ClinicModel =     require("../../models/clinic-review-model");
+const ClinicSeedModel = require("../../models/clinic-seed-model");
+const passport=         require("passport");
 
 const router = express.Router();
 
@@ -10,6 +11,20 @@ const router = express.Router();
 router.get("/ready", (req, res, next) => {
   res.render("begin");
 });
+
+router.get("/clinics", (req, res, next)=> {
+  ClinicSeedModel
+  .find()
+  .exec()
+  .then( clinicSeedResults => {
+    res.locals.clinicSeed = clinicSeedResults;
+    res.render("clinic-list");
+  })
+  .catch( err => {
+    next(err);
+  });
+});
+
 
 
 // SIGN UP ROUTES --------------------------------------------------
@@ -171,6 +186,7 @@ router.get("/centers", (req, res, next) => {
   .catch( err => {
     next( err );
   });
+
 });
 
 // Facebook log in routes

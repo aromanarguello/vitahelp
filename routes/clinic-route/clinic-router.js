@@ -22,7 +22,7 @@ const newReview = new ClinicModel( clinicReview );
 newReview.save( err => {
   if ( err ) {
     return next( err );
-   }
+  }
     return res.redirect("/centers");
   });
 });
@@ -109,34 +109,16 @@ router.post("/user-reviews/:id", (req, res, next) => {
   });
 });
 
+router.post("/user-reviews/:id/delete", (req, res, next) => {
+  UserReviewModel.findByIdAndRemove(req.params.id)
+  .then( reviewFromDb => {
+    res.redirect("/user-reviews/new");
+  })
+  .catch(err => {
+    next( err );
+  });
+});
 
-// router.get("/user-reviews/:id", (req, res, next) => {
-//   ClinicModel.findById(req.params.id)
-//   .then( reviewFromDb => {
-//     res.locals.userReviews = reviewFromDb;
-//     res.render("review-views/review-details");
-//   })
-//   .catch( err => {
-//     next( err );
-//   });
-// });
-//
-//
-// router.post("/centers/:id/new", ( req, res, next)=> {
-//   const clinicReview = {
-//   content:    req.body.reviewContent,
-//   authorName: req.body.reviewAuthorName,
-//   clinicName: req.body.reviewClinicName,
-//   dateAdded:  new Date()
-// };
-//
-// const newComment = new ClinicModel( clinicReview );
-// newComment.save( err => {
-//   if ( err ) {
-//     return next( err );
-//    }
-//     return res.redirect("/user-reviews");
-//   });
 });
 
 

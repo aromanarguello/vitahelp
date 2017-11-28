@@ -18,6 +18,8 @@ router.get("/clinics", (req, res, next)=> {
   .exec()
   .then( clinicSeedResults => {
     res.locals.clinicSeed = clinicSeedResults;
+    console.log(clinicSeedResults);
+    console.log(ClinicSeedModel);
     res.render("clinic-list");
   })
   .catch( err => {

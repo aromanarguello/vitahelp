@@ -10,7 +10,6 @@ $(document).ready( () => {
     }
   });
 
-
 function startMap() {
   var brickellMia = {
   	lat: 25.7601793,

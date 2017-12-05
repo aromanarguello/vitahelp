@@ -532,4 +532,8 @@ hr {
     width: 30%;
   }
 
+  .calendly-container {
+    float: right;
+  }
+
 }

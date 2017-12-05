@@ -9,9 +9,12 @@
 
 /*--------------*/
 
+
+
 body {
   background-color: rgb(236, 240, 241);
-  font-family: lato;
+  font-family: : 14px "Platform-Medium", Arial, Helvetica, Verdana, sans-serif;
+
 }
 .nav-container {
   /*border-bottom: 1px solid rgb(127, 140, 141);*/

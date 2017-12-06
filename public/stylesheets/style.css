@@ -16,6 +16,10 @@ body {
   font-family: : 14px "Platform-Medium", Arial, Helvetica, Verdana, sans-serif;
 }
 
+.nav-links {
+  font-size: 2vw;
+  font-weight: bold;
+}
 
 
 .nav-container {
@@ -241,18 +245,12 @@ hr {
 /*-------------*/
 /*--- INDEX ---*/
 /*-------------*/
-/*.free-container {
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  margin-top: 50px;
-  border-radius: 3px;
-  background-color: rgba(236, 240, 241,0.7);
-  box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
-}*/
 
 .free-container {
   margin-top: 50px;
+  width: 30%;
+  height: 50%;
+  text-align: center;
 }
 
 .free {
@@ -502,10 +500,6 @@ hr {
     padding: 0;
   }
 
-  .signup-btn-container {
-    width: 150px;
-  }
-
   .free {
     margin-top: 30px;
   }
@@ -548,5 +542,7 @@ hr {
   .calendly-container {
     float: right;
   }
+
+
 
 }

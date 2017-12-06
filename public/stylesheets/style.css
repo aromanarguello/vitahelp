@@ -236,8 +236,8 @@ hr {
 /*--- INDEX ---*/
 /*-------------*/
 .free-container {
-  width: 55%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
   text-align: center;
   margin-top: 50px;
   border-radius: 3px;
@@ -258,7 +258,7 @@ hr {
   border-radius: 5px;
   height: 30px;
   width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
   box-shadow: 1px 1px 5px rgba(127, 140, 141,0.5);
